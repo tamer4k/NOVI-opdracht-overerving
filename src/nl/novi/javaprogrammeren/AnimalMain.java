@@ -1,6 +1,41 @@
 package nl.novi.javaprogrammeren;
 
+
+import nl.novi.javaprogrammeren.overerving.*;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class AnimalMain {
+
+    public static void main(String[]args){
+
+        Animal leeuw1 = new Leeuw("Simba", "Hok1", "Mannelijk", "maandag", "Afrika", 3);
+        Animal tijger1 = new Tijger("Rajah", "Hok2", "Vrouwelijk", "Dinsdag", "Azië", 50);
+        Animal wolf1 = new Wolf("Alpha", "Hok3", "Mannelijk", "Woensdag", "Noord-Amerika", "Pack1");
+
+        Animal kat1 = new Kat("Whiskers", "Vrouwelijk", "Alice", "KatFood", "Siamees", true);
+        Animal hond1 = new Hond("Fido", "Mannelijk", "John", "DogFood", "Golden Retriever");
+
+        List<Animal> animal = new ArrayList<>();
+
+
+        animal.add(leeuw1);
+        animal.add(tijger1);
+        animal.add(wolf1);
+        animal.add(kat1);
+        animal.add(hond1);
+
+        for (Animal dier1:animal) {
+
+            String classNames = dier1.getClass().getSimpleName();
+
+            System.out.println(classNames + " : " );
+            dier1.print();
+
+        }
+
     /*
     Het is traditie om overerving uit te leggen met behulp van dieren. Hier ontkomen jullie dus ook niet aan.
 
@@ -34,4 +69,4 @@ public class AnimalMain {
 
      */
 
-}
+}}
